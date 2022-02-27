@@ -34,5 +34,8 @@ public class Paddle : NetworkBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && isServer && manager.bricksUp) {
             FindObjectOfType<NetworkManagerBreakout>().LaunchBalls(name);
         }// if host launch ball from unballed paddles
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Application.Quit();
+        }
     }
 }
